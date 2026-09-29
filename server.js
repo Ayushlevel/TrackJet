@@ -13,7 +13,7 @@ const dashboardRoutes= require("./routes/dashboardRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 
 
-dns.setServers(["1.1.1.1", "8.8.8.1"]);
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -50,5 +50,5 @@ app.use("/api/tasks",taskRoutes);
 app.use("/api/dashboard",dashboardRoutes);
 app.use("/api/comments", commentRoutes);
 app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`🚀 Trackjet Server running at ${PORT}`);
 });
